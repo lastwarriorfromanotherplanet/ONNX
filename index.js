@@ -20,7 +20,7 @@ async function runExample() {
 
     let session = new onnx.InferenceSession();
 
-    await session.loadModel("./onnx_model.onnx");
+    await session.loadModel("onnx_model.onnx");
     let outputMap = await session.run([tensorX]);
     let outputData = outputMap.get('output');
 
